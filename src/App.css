@@ -1,6 +1,7 @@
 .image-container {
   display: flex;
   margin-top: 50px; 
+  flex-direction: column;
 }
 
 .image-section {
@@ -8,7 +9,7 @@
   height: 100px;
   border-radius: 50%;
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
   margin: 10px;
   margin-left: 160px;
@@ -34,6 +35,7 @@
 
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 .second-c{
   margin-left: 200px;
@@ -42,6 +44,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
 }
 .second-c p {
   width: 280px;
@@ -60,3 +63,24 @@
 .third-c h3{
   margin-left: 925px;
 }
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column; /* Shfaq në kolonë në vend të rreshtit në pajisjet mobile */
+  }
+  .first-c, .second-c, .third-c {
+    margin-left: 0; /* Hiq marginën e majtë në pajisjet mobile */
+  }
+  .second-c p, .second-c h3, .third-c p, .third-c h3 {
+    width: auto;
+    margin-left: 0; /* Hiq marginën në majë të tekstit në pajisjet mobile */
+  }
+  .text {
+    position: absolute; /* Kthe pozicionin në rregull për tekst në pajisjet mobile */
+    margin-left: 120px; 
+  }
+  .image-container{
+    margin-left: -150px;
+    margin-right: 6px;
+  }
+}
+  
