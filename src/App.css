@@ -65,22 +65,23 @@
 }
 @media screen and (max-width: 767px) {
   .container {
-    flex-direction: column; /* Shfaq në kolonë në vend të rreshtit në pajisjet mobile */
+    flex-direction: column; 
   }
   .first-c, .second-c, .third-c {
-    margin-left: 0; /* Hiq marginën e majtë në pajisjet mobile */
+    margin-left: 0; 
   }
   .second-c p, .second-c h3, .third-c p, .third-c h3 {
     width: auto;
-    margin-left: 0; /* Hiq marginën në majë të tekstit në pajisjet mobile */
+    margin-left: 0;
   }
   .text {
-    position: absolute; /* Kthe pozicionin në rregull për tekst në pajisjet mobile */
+    position: absolute; 
     margin-left: 120px; 
   }
   .image-container{
     margin-left: -150px;
     margin-right: 6px;
   }
+
 }
   
