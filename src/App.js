@@ -13,7 +13,7 @@ import language from "./assets/language.png";
 import adverstisement from "./assets/adverstisement.png";
 import opportunity from "./assets/opportunity.png";
 
-const kevinJoe = require("./assets/kevinJoe.png");
+const kevinJoe = require("./assets/kevinJoe.png");  
 
 
 
