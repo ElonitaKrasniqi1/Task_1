@@ -13,7 +13,7 @@ import language from "./assets/language.png";
 import adverstisement from "./assets/adverstisement.png";
 import opportunity from "./assets/opportunity.png";
 
-const kevinJoe = require("./assets/kevinjoe.png");
+const kevinJoe = require("./assets/kevinJoe.png");
 
 
 
@@ -26,6 +26,37 @@ const cardData = {
   downloadBtn: "Download",
 };
 
+const newCardData = {
+  version: "3.1.0 (20/05/2015)",
+  buttonText: "Fix",
+  author: "Kevin Joe",
+  image: kevinJoe,
+  text: (
+    <>
+      Introducing Host Cloud Drive - virtual drive funcionality <br/>
+      New share options and managment <br/>
+      New more user friendly Sync optimizations <br/>
+      Various performance improvements and bug fixes
+    </>
+  ),
+  downloadBtn: "Download",
+};
+
+const newnCardData = {
+  version: "3.1.0 (20/05/2015)",
+  buttonText: "Improvement",
+  author: "Kevin Joe",
+  image: kevinJoe,
+  text:( 
+    <>
+    Added Settings for Auto Start <br/> 
+    Added Update Notification <br/> 
+    Speed Optimization <br/> 
+    Bug Fixes
+  </>
+  ),
+  downloadBtn:"Download",
+}
 const firstcolumn = [
   { image: com, title: "The TLD", text: "Does the domain extension match the language of the domain name?" },
   { image: award, title: "International Recognition", text: "Can the domain name be used on an international scale?" },
@@ -69,12 +100,23 @@ export default function App() {
     </>
   );
 }
+
 export function Profile() {
   return (
+    <><div className="prf-cont">
     <div className="first-data">
       <Card {...cardData} />
       <Card {...cardData} />
       <Card {...cardData} />
-    </div>
+    </div><div className="second-data">
+          <Card {...newCardData} />
+          <Card {...newCardData} /> 
+          <Card {...newCardData} />
+        </div><div className="third-data">
+          <Card {...newnCardData} />
+          <Card {...newnCardData} /> 
+          <Card {...newnCardData} />
+        </div>
+      </div></>
   );
 }
