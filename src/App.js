@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import ImageSection from "./ImageSection";
+import Card from "./Card"
 
 import com from "./assets/com.png";
 import award from "./assets/award.png";
@@ -11,7 +12,20 @@ import text from "./assets/text.jpeg";
 import language from "./assets/language.png";
 import adverstisement from "./assets/adverstisement.png";
 import opportunity from "./assets/opportunity.png";
-  
+
+const kevinJoe = require("./assets/kevinjoe.png");
+
+
+
+const cardData = {
+  version: "3.3.0 (14/05/2018)",
+  buttonText: "New",
+  author: "Kevin Joe",
+  image: kevinJoe,
+  text: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvements Share permissions re-design optimization.",
+  downloadBtn: "Download",
+};
+
 const firstcolumn = [
   { image: com, title: "The TLD", text: "Does the domain extension match the language of the domain name?" },
   { image: award, title: "International Recognition", text: "Can the domain name be used on an international scale?" },
@@ -25,30 +39,42 @@ const secondcolumn = [
 ];
 
 const thirdcolumn = [
-  {image: language, title: "Language", text: "How complex is the actual domain name? "},
-  {image: adverstisement, title: "Advertising Potential", text: "Could the domain be used for advertising campaigns? "},
-  {image: opportunity, title: "Business Potential", text: "Can the domain be used as your company address? "},
-]
+  { image: language, title: "Language", text: "How complex is the actual domain name? " },
+  { image: adverstisement, title: "Advertising Potential", text: "Could the domain be used for advertising campaigns? " },
+  { image: opportunity, title: "Business Potential", text: "Can the domain be used as your company address? " },
+];
+
+
 export default function App() {
   return (
     <>
-    <div className="container">
-    <div className="first-c">
-      {firstcolumn.map((item, index) => (
-        <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
-      ))}
+      <div className="container">
+        <div className="first-c">
+          {firstcolumn.map((item, index) => (
+            <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
+          ))}
+        </div>
+        <div className="second-c">
+          {secondcolumn.map((item, index) => (
+            <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
+          ))}
+        </div>
+        <div className="third-c">
+          {thirdcolumn.map((item, index) => (
+            <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
+          ))}
+        </div>
+      </div>
+      <Profile />
+    </>
+  );
+}
+export function Profile() {
+  return (
+    <div className="first-data">
+      <Card {...cardData} />
+      <Card {...cardData} />
+      <Card {...cardData} />
     </div>
-    <div className="second-c">
-      {secondcolumn.map((item, index) => (
-        <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
-      ))}
-    </div>
-    <div className="third-c">
-      {thirdcolumn.map((item, index) => (
-        <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
-      ))}
-    </div>
-  </div>
-  </>
   );
 }
