@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import ImageSection from "./ImageSection";
-import Card from "./Card"
+import Card from "./Card";
 
 import com from "./assets/com.png";
 import award from "./assets/award.png";

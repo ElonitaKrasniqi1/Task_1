@@ -1,4 +1,4 @@
-// Card.js
+
 import React from "react";
 
 export default function Card({ version, buttonText, author, image, text, downloadBtn }) {
