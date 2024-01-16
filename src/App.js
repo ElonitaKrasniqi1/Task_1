@@ -26,7 +26,7 @@ const cardData = {
   cards: [
     {
       buttonText: "New",
-      buttonStyle: { backgroundColor: 'green' },
+      buttonStyle: { backgroundColor: 'green'},
       cardText: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvements Share permissions re-design optimization."
     },
     {
@@ -43,7 +43,7 @@ const cardData = {
     },
     {
       buttonText: "Improvement",
-      buttonStyle: { backgroundColor: 'purple' },
+      buttonStyle: { backgroundColor: 'purple', width: '120px' },
       cardText: ( 
         <>
         Added Settings for Auto Start <br/> 
@@ -82,7 +82,7 @@ const newCardData = {
     },
     {
       buttonText: "Improvement",
-      buttonStyle: { backgroundColor: 'purple' },
+      buttonStyle: { backgroundColor: 'purple', width: '120px' },
       cardText: ( 
         <>
         Added Settings for Auto Start <br/> 
@@ -121,7 +121,7 @@ const newnCardData = {
     },
     {
       buttonText: "Improvement",
-      buttonStyle: { backgroundColor: 'purple' },
+      buttonStyle: { backgroundColor: 'purple', width: '120px' },
       cardText: ( 
         <>
         Added Settings for Auto Start <br/> 
