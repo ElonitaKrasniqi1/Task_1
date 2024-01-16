@@ -62,7 +62,7 @@
 .third-c h3{
   margin-left: 925px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .container {
     flex-direction: column; 
   }
@@ -78,13 +78,49 @@
     margin-left: 120px; 
     padding-left: 12px;
   }
+  .third-c .text {
+   padding-left: 3px;
+  }
   .image-container{
     margin-left: -150px;
     margin-right: 6px;
   }
-
-
 }
+
+@media screen and (max-width:767px) {
+  .first-data {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .second-data {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .third-data {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .card {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  
+  .img-container {
+    position: absolute;
+    left: 80px;
+    top: -240px;
+  }
+  
+}
+
 .round-image {
   width: 40px; 
   height: 40px; 
