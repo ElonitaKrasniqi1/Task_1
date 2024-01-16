@@ -22,8 +22,38 @@ const cardData = {
   buttonText: "New",
   author: "Kevin Joe",
   image: kevinJoe,
-  text: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvements Share permissions re-design optimization.",
   downloadBtn: "Download",
+  cards: [
+    {
+      buttonText: "New",
+      buttonStyle: { backgroundColor: 'green' },
+      cardText: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvements Share permissions re-design optimization."
+    },
+    {
+      buttonText: "Fix",
+      buttonStyle: { backgroundColor: 'blue' },
+      cardText:  (
+        <>
+          Introducing Host Cloud Drive - virtual drive funcionality <br/>
+          New share options and managment <br/>
+          New more user friendly Sync optimizations <br/>
+          Various performance improvements and bug fixes
+        </>
+      ),
+    },
+    {
+      buttonText: "Improvement",
+      buttonStyle: { backgroundColor: 'purple' },
+      cardText: ( 
+        <>
+        Added Settings for Auto Start <br/> 
+        Added Update Notification <br/> 
+        Speed Optimization <br/> 
+        Bug Fixes
+      </>
+      ),
+    },
+  ],
 };
 
 const newCardData = {
@@ -31,15 +61,38 @@ const newCardData = {
   buttonText: "Fix",
   author: "Kevin Joe",
   image: kevinJoe,
-  text: (
-    <>
-      Introducing Host Cloud Drive - virtual drive funcionality <br/>
-      New share options and managment <br/>
-      New more user friendly Sync optimizations <br/>
-      Various performance improvements and bug fixes
-    </>
-  ),
   downloadBtn: "Download",
+  cards: [
+    {
+      buttonText: "New",
+      buttonStyle: { backgroundColor: 'green' },
+      cardText: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvements Share permissions re-design optimization."
+    },
+    {
+      buttonText: "Fix",
+      buttonStyle: { backgroundColor: 'blue' },
+      cardText:  (
+        <>
+          Introducing Host Cloud Drive - virtual drive funcionality <br/>
+          New share options and managment <br/>
+          New more user friendly Sync optimizations <br/>
+          Various performance improvements and bug fixes
+        </>
+      ),
+    },
+    {
+      buttonText: "Improvement",
+      buttonStyle: { backgroundColor: 'purple' },
+      cardText: ( 
+        <>
+        Added Settings for Auto Start <br/> 
+        Added Update Notification <br/> 
+        Speed Optimization <br/> 
+        Bug Fixes
+      </>
+      ),
+    },
+  ],
 };
 
 const newnCardData = {
@@ -47,15 +100,38 @@ const newnCardData = {
   buttonText: "Improvement",
   author: "Kevin Joe",
   image: kevinJoe,
-  text:( 
-    <>
-    Added Settings for Auto Start <br/> 
-    Added Update Notification <br/> 
-    Speed Optimization <br/> 
-    Bug Fixes
-  </>
-  ),
   downloadBtn:"Download",
+  cards: [
+    {
+      buttonText: "New",
+      buttonStyle: { backgroundColor: 'green' },
+      cardText: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvements Share permissions re-design optimization."
+    },
+    {
+      buttonText: "Fix",
+      buttonStyle: { backgroundColor: 'blue' },
+      cardText:  (
+        <>
+          Introducing Host Cloud Drive - virtual drive funcionality <br/>
+          New share options and managment <br/>
+          New more user friendly Sync optimizations <br/>
+          Various performance improvements and bug fixes
+        </>
+      ),
+    },
+    {
+      buttonText: "Improvement",
+      buttonStyle: { backgroundColor: 'purple' },
+      cardText: ( 
+        <>
+        Added Settings for Auto Start <br/> 
+        Added Update Notification <br/> 
+        Speed Optimization <br/> 
+        Bug Fixes
+      </>
+      ),
+    },
+  ],
 }
 const firstcolumn = [
   { image: com, title: "The TLD", text: "Does the domain extension match the language of the domain name?" },
@@ -105,18 +181,19 @@ export function Profile() {
   return (
     <><div className="prf-cont">
     <div className="first-data">
-      <Card {...cardData} />
-      <Card {...cardData} />
-      <Card {...cardData} />
+    {cardData.cards.map((card, index) => (
+            <Card key={index} {...cardData} {...card} />
+          ))}
     </div><div className="second-data">
-          <Card {...newCardData} />
-          <Card {...newCardData} /> 
-          <Card {...newCardData} />
+    {newCardData.cards.map((card, index) => (
+            <Card key={index} {...newCardData} {...card} />
+          ))}
         </div><div className="third-data">
-          <Card {...newnCardData} />
-          <Card {...newnCardData} /> 
-          <Card {...newnCardData} />
-        </div>
+  {newnCardData.cards.map((card, index) => (
+    <Card key={index} {...newnCardData} {...card} />
+  ))}
+</div>
+
       </div></>
   );
 }

@@ -117,37 +117,29 @@
   padding-left: 20px;
 }
 
-.new-button {
-  order: 1;
-  background-color: #4caf50; 
-  color: #fff; 
-  border: 1px solid #4caf50; 
+.first-data .new-button {
+  color: #fff;  
   border-radius: 5px; 
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s; 
   height: 40px;
-  width: 100px;
+  width: 110px;
   font-family: sans-serif;
   font-size: medium;
 }
 
 .new-button:hover {
-  background-color: #8bc34a;
   color: #000; 
 }
 
-.round-image {
-  order: 2;
+.prf-cont {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .text-container p {
   order: 3;
-}
-.img-container{
-  margin-left: 80px;
-  position: absolute;
-  margin-top: -240px;
-
 }
 .KevinJoe{
   position: absolute;
@@ -181,39 +173,140 @@
   transform: translateY(-7px);  
   transition: transform 0.5s;   
 }
-.prf-cont {
-  display: flex;
-  justify-content:last baseline;
-  padding-bottom: 100px;
-}
 
 
-.second-data .new-button {
-  background-color: blue; 
-}
-
-.second-data .new-button:hover {
-  background-color: #00FFFF; 
-  color: black; 
-}
 .second-data .text-c{
 padding-top: 35px;
 margin-bottom: -20px;
 }
 
-.second-data .img-container{
-  margin-left: 80px;
-  position: absolute;
-  margin-top: -240px;
-}
 
 .third-data .new-button{
-  background-color: #9400d3;
-  width: fit-content;
-  border: 1px solid #9400d3;
+  color: #fff;  
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+  height: 40px;
+  width: 110px;
+  font-family: sans-serif;
+  font-size: medium;
 }
 .third-data .new-button:hover {
-  background-color: violet;
   color: #000;
 }
+.first-data {
+  display: flex;
+}
+.second-data {
+  display: flex;
+}
+.third-data {
+  display: flex;
+}
+.second-data .new-button {
+  color: #fff;  
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+  height: 40px;
+  width: 110px;
+  font-family: sans-serif;
+  font-size: medium;
+}
+.second-data .new-button:hover {
+  color: #000; 
+}
+.first-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;  
+}
 
+.first-data .card {
+  position: relative;
+}
+
+.first-data .img-container {
+  position: absolute;
+  left: 115px;
+  top: 90px;
+}
+.second-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; 
+}
+
+.second-data .card {
+  position: relative;
+}
+
+.second-data .img-container {
+  position: absolute;
+  left: 115px;
+  top: 90px;
+}
+.third-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; 
+}
+
+.third-data .card {
+  position: relative;
+}
+
+.third-data .img-container {
+  position: absolute;
+  left: 115px;
+  top: 90px;
+}
+
+.first-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; 
+}
+
+.first-data .card {
+  position: relative;
+}
+
+.first-data .download-button{
+  position: absolute;
+  left: 25px;
+  top: 300px;
+}
+
+
+.second-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;  
+}
+
+.second-data .card {
+  position: relative;
+}
+
+.second-data .download-button{
+  position: absolute;
+  left: 25px;
+  top: 300px;
+}
+
+.third-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;  
+}
+
+.third-data .card {
+  position: relative;
+}
+
+.third-data .download-button{
+  position: absolute;
+  left: 25px;
+  top: 300px;
+}

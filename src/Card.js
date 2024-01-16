@@ -1,7 +1,6 @@
-
 import React from "react";
 
-export default function Card({ version, buttonText, author, image, text, downloadBtn }) {
+export default function Card({ version, buttonText, author, image, downloadBtn, buttonStyle, cardText }) {
   return (
     <div className="card">
       <div className="card-header">
@@ -12,11 +11,14 @@ export default function Card({ version, buttonText, author, image, text, downloa
           <img className="round-image" src={image} alt="Author" />
         </div>
         <div className="text-container">
-          <button className="new-button">
+          <button
+            style={buttonStyle}
+            className="new-button"
+          >
             {buttonText}
           </button>
           <p className="KevinJoe">{author}</p>
-          <p className="text-c">{text}</p>
+          <p className="text-c">{cardText}</p>
           <button className="download-button">
             {downloadBtn}
           </button>
