@@ -34,7 +34,8 @@
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;   
+  
 }
 .second-c{
   margin-left: 200px;
