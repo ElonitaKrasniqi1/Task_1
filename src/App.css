@@ -1,7 +1,6 @@
 .image-container {
   display: flex;
   margin-top: 50px; 
-  flex-direction: column;
 }
 
 .image-section {
@@ -9,6 +8,7 @@
   height: 100px;
   border-radius: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 10px;
   margin-left: 160px;
@@ -34,8 +34,6 @@
 
 .container {
   display: flex;
-  flex-wrap: wrap;   
-
 }
 .second-c{
   margin-left: 200px;
@@ -44,7 +42,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
 }
 .second-c p {
   width: 280px;
@@ -63,153 +60,20 @@
 .third-c h3{
   margin-left: 925px;
 }
-
-@media screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-  .first-c, .second-c, .third-c {
-    margin-left: 0;
-  }
-  .second-c p, .second-c h3, .third-c p, .third-c h3 {
-    width: auto;
-    margin-left: 0;
-  }
-  .text {
-    position: absolute;
-    margin-left: 120px;
-    padding-left: 12px;
-  }
-  .third-c .text {
-    padding-left: 3px;
-  }
-  .image-container {
-    margin-left: -150px;
-    margin-right: 6px;
-  }
+.first-data,
+.second-data,
+.third-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@media screen and (min-width: 601px) and (max-width: 767px) {
-  .container {
-    flex-direction: column;
-  }
-  .first-c, .second-c, .third-c {
-    margin-left: 0;
-  }
-  .second-c p, .second-c h3, .third-c p, .third-c h3 {
-    width: auto;
-    margin-left: 0;
-  }
-  .text {
-    position: absolute;
-    margin-left: 120px;
-    padding-left: 12px;
-  }
-  .third-c .text {
-    padding-left: 3px;
-  }
-  .image-container {
-    margin-left: -150px;
-    margin-right: 6px;
-  }
+.first-data .card,
+.second-data .card,
+.third-data .card {
+  margin-bottom: 10px; 
 }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .first-data, .second-data, .third-data {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-  }
-  .first-c, .second-c, .third-c {
-    width: 100%; 
-    margin: 5px; 
-  }
-  .second-c {
-    margin-left: 20px; 
-  }
-
-  .second-c p {
-    width: auto;
-    margin-left: 15px;
-  }
-
-  .second-c h3 {
-    margin-left: 15px;
-  }
-
-  .card {
-    flex: 0 0 calc(50% - 20px);
-    margin: 10px;
-    scroll-snap-align: start;
-    position: relative;
-  }
-
-  .img-container {
-    position: absolute;
-    left: 80px;
-    top: -240px;
-  }
-
-  .third-c {
-    margin-left: 20px; 
-  }
-
-  .third-c p {
-    width: auto;
-    margin-left: 15px;
-  }
-
-  .third-c h3 {
-    margin-left: 15px;
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
- .third-c p {
-    width: 100%;
-  }
-  .second-c {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin: 0 20px;
-    position: relative;
-    width: calc(50% - 40px); 
-  }
-
-  .second-c p,
-  .second-c h3 {
-    width: 100%; 
-    margin-left: 0; 
-    position: relative; 
-    z-index: 1; 
-    width: 230px;
-  }
-
-  .second-c .img-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-  }
- .third-c {
-  margin-left: 20px; 
-}
-
-.third-c p, .third-c h3 {
-  width: auto;
-  margin-left: 15px;
-}
-}
-
 .round-image {
   width: 40px; 
   height: 40px; 
@@ -220,10 +84,10 @@
 .card {
   border: 1px solid #ccc;
   border-radius: 20px;
-  width: 380px;
-  height: 400px;
+  width: 340px;
+  height: 380px;
   margin-left: 70px;
-  margin-top: 120px;
+  margin-top: 50px;
   padding: 10px;
   font-family: sans-serif;
 }
@@ -260,7 +124,7 @@
 .prf-cont {
   display: flex;
   flex-direction: column;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
 }
 
 .text-container p {
@@ -319,15 +183,7 @@ margin-bottom: -20px;
 .third-data .new-button:hover {
   color: #000;
 }
-.first-data {
-  display: flex;
-}
-.second-data {
-  display: flex;
-}
-.third-data {
-  display: flex;
-}
+
 .second-data .new-button {
   color: #fff;  
   border-radius: 5px; 
@@ -341,11 +197,7 @@ margin-bottom: -20px;
 .second-data .new-button:hover {
   color: #000; 
 }
-.first-data {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;  
-}
+
 
 .first-data .card {
   position: relative;
@@ -356,25 +208,12 @@ margin-bottom: -20px;
   left: 115px;
   top: 90px;
 }
-.second-data {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px; 
-}
 
-.second-data .card {
-  position: relative;
-}
 
 .second-data .img-container {
   position: absolute;
   left: 115px;
   top: 90px;
-}
-.third-data {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px; 
 }
 
 .third-data .card {
@@ -387,7 +226,7 @@ margin-bottom: -20px;
   top: 90px;
 }
 
-.first-data {
+.first-data, .second-data, .third-data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px; 
@@ -404,12 +243,6 @@ margin-bottom: -20px;
 }
 
 
-.second-data {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;  
-}
-
 .second-data .card {
   position: relative;
 }
@@ -420,18 +253,177 @@ margin-bottom: -20px;
   top: 300px;
 }
 
-.third-data {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;  
-}
-
-.third-data .card {
-  position: relative;
-}
 
 .third-data .download-button{
   position: absolute;
   left: 25px;
   top: 300px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+ .third-c p {
+    width: 100%;
+  }
+  .second-c {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 20px;
+    position: relative;
+    width: calc(50% - 40px); 
+  }
+
+  .second-c p,
+  .second-c h3 {
+    width: 100%; 
+    margin-left: 0; 
+    position: relative; 
+    z-index: 1; 
+    width: 230px;
+  }
+
+  .second-c .img-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+ .third-c {
+  margin-left: 20px; 
+}
+
+.third-c p, .third-c h3 {
+  width: auto;
+  margin-left: 15px;
+}
+.first-data, .second-data, .third-data{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto; 
+  box-sizing: border-box; 
+}
+}
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+ .third-c p {
+    width: 100%;
+  }
+  .second-c {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 20px;
+    position: relative;
+    width: calc(50% - 40px); 
+  }
+
+  .second-c p,
+  .second-c h3 {
+    width: 100%; 
+    margin-left: 0; 
+    position: relative; 
+    z-index: 1; 
+    width: 230px;
+  }
+
+  .second-c .img-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+ .third-c {
+  margin-left: 20px; 
+}
+
+.third-c p, .third-c h3 {
+  width: auto;
+  margin-left: 15px;
+}
+.first-data, .second-data, .third-data{
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: repeat(2, 1fr); 
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 80%; 
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+}
+@media screen and (min-width: 200px) and (max-width: 700px){
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+ .third-c p {
+    width: 100%;
+  }
+  .second-c {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 20px;
+    position: relative;
+    width: calc(50% - 40px); 
+  }
+
+  .second-c p,
+  .second-c h3 {
+    width: 100%; 
+    margin-left: 0; 
+    position: relative; 
+    z-index: 1; 
+    width: 230px;
+  }
+
+  .second-c .img-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+ .third-c {
+  margin-left: 20px; 
+}
+
+.third-c p, .third-c h3 {
+  width: auto;
+  margin-left: 15px;
+}
+.first-data, .second-data, .third-data{
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: repeat(2, 1fr); 
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 80%; 
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 }

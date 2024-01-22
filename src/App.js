@@ -180,20 +180,21 @@ export default function App() {
 export function Profile() {
   return (
     <><div className="prf-cont">
+      <div className="wrapper">
     <div className="first-data">
     {cardData.cards.map((card, index) => (
-            <Card key={index} {...cardData} {...card} />
+            <><Card key={index} {...cardData} {...card} /></>
           ))}
     </div><div className="second-data">
     {newCardData.cards.map((card, index) => (
-            <Card key={index} {...newCardData} {...card} />
+                       <><Card key={index} {...newCardData} {...card} /></>
           ))}
         </div><div className="third-data">
   {newnCardData.cards.map((card, index) => (
-    <Card key={index} {...newnCardData} {...card} />
+               <><Card key={index} {...newnCardData} {...card} /></>
   ))}
 </div>
-
+</div>
       </div></>
   );
 }
