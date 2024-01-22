@@ -62,63 +62,154 @@
 .third-c h3{
   margin-left: 925px;
 }
+/* ... (Your existing styles) */
+
 @media screen and (max-width: 600px) {
+  /* Mobile styles */
   .container {
-    flex-direction: column; 
+    flex-direction: column;
   }
   .first-c, .second-c, .third-c {
-    margin-left: 0; 
+    margin-left: 0;
   }
   .second-c p, .second-c h3, .third-c p, .third-c h3 {
     width: auto;
     margin-left: 0;
   }
   .text {
-    position: absolute; 
-    margin-left: 120px; 
+    position: absolute;
+    margin-left: 120px;
     padding-left: 12px;
   }
   .third-c .text {
-   padding-left: 3px;
+    padding-left: 3px;
   }
-  .image-container{
+  .image-container {
     margin-left: -150px;
     margin-right: 6px;
   }
 }
 
-@media screen and (max-width:767px) {
-  .first-data {
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  /* Small tablets */
+  .container {
+    flex-direction: column;
+  }
+  .first-c, .second-c, .third-c {
+    margin-left: 0;
+  }
+  .second-c p, .second-c h3, .third-c p, .third-c h3 {
+    width: auto;
+    margin-left: 0;
+  }
+  .text {
+    position: absolute;
+    margin-left: 120px;
+    padding-left: 12px;
+  }
+  .third-c .text {
+    padding-left: 3px;
+  }
+  .image-container {
+    margin-left: -150px;
+    margin-right: 6px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .first-data, .second-data, .third-data {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
   }
-  .second-data {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+  .first-c, .second-c, .third-c {
+    width: 100%; 
+    margin: 5px; 
   }
-  .third-data {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+  .second-c {
+    margin-left: 20px; 
   }
+
+  .second-c p {
+    width: auto;
+    margin-left: 15px;
+  }
+
+  .second-c h3 {
+    margin-left: 15px;
+  }
+
   .card {
-    flex: 0 0 calc(33.33% - 20px);
+    flex: 0 0 calc(50% - 20px);
     margin: 10px;
     scroll-snap-align: start;
     position: relative;
   }
-  
+
   .img-container {
     position: absolute;
     left: 80px;
     top: -240px;
   }
-  
+
+  .third-c {
+    margin-left: 20px; 
+  }
+
+  .third-c p {
+    width: auto;
+    margin-left: 15px;
+  }
+
+  .third-c h3 {
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+ .third-c p {
+    width: 100%;
+  }
+  .second-c {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 20px;
+    position: relative;
+    width: calc(50% - 40px); /* Përcakto një width fikse për .second-c */
+  }
+
+  .second-c p,
+  .second-c h3 {
+    width: 100%; 
+    margin-left: 0; 
+    position: relative; 
+    z-index: 1; 
+    width: 230px;
+  }
+
+  .second-c .img-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+ .third-c {
+  margin-left: 20px; 
+}
+
+.third-c p, .third-c h3 {
+  width: auto;
+  margin-left: 15px;
+}
 }
 
 .round-image {
