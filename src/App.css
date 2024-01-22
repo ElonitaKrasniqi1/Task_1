@@ -62,10 +62,8 @@
 .third-c h3{
   margin-left: 925px;
 }
-/* ... (Your existing styles) */
 
 @media screen and (max-width: 600px) {
-  /* Mobile styles */
   .container {
     flex-direction: column;
   }
@@ -91,7 +89,6 @@
 }
 
 @media screen and (min-width: 601px) and (max-width: 767px) {
-  /* Small tablets */
   .container {
     flex-direction: column;
   }
@@ -184,7 +181,7 @@
     text-align: left;
     margin: 0 20px;
     position: relative;
-    width: calc(50% - 40px); /* Përcakto një width fikse për .second-c */
+    width: calc(50% - 40px); 
   }
 
   .second-c p,
