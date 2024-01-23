@@ -229,7 +229,6 @@ margin-bottom: -20px;
 .first-data, .second-data, .third-data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px; 
 }
 
 .first-data .card {
@@ -297,22 +296,20 @@ margin-bottom: -20px;
     z-index: 0;
   }
  .third-c {
-  margin-left: 20px; 
+  margin-left: -5px; 
 }
 
 .third-c p, .third-c h3 {
   width: auto;
-  margin-left: 15px;
+  margin-left: -5px;
 }
 .first-data, .second-data, .third-data{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3,375px);
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 0 auto; 
-  box-sizing: border-box; 
+  margin-left: -30px;
+  margin-right: 80px;  
 }
 }
 @media screen and (min-width: 700px) and (max-width: 1024px) {
@@ -326,6 +323,9 @@ margin-bottom: -20px;
  .third-c p {
     width: 100%;
   }
+  .first-c p{
+    width: 230px;
+  }
   .second-c {
     display: flex;
     flex-direction: column;
@@ -352,12 +352,12 @@ margin-bottom: -20px;
     z-index: 0;
   }
  .third-c {
-  margin-left: 20px; 
+  margin-left: -5px; 
 }
 
 .third-c p, .third-c h3 {
   width: auto;
-  margin-left: 15px;
+  margin-left: -5px;
 }
 .first-data, .second-data, .third-data{
   display: grid;
@@ -371,7 +371,7 @@ margin-bottom: -20px;
   box-sizing: border-box;
 }
 }
-@media screen and (min-width: 200px) and (max-width: 700px){
+@media screen and (min-width: 250px) and (max-width: 700px){
   .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -382,6 +382,13 @@ margin-bottom: -20px;
  .third-c p {
     width: 100%;
   }
+  .first-c{
+    margin-left: -70px;
+  }
+  .first-c p, .first-c h3{
+    width: auto;
+    margin-left:-65px;
+  }
   .second-c {
     display: flex;
     flex-direction: column;
@@ -390,6 +397,7 @@ margin-bottom: -20px;
     margin: 0 20px;
     position: relative;
     width: calc(50% - 40px); 
+    margin-left: -70px;
   }
 
   .second-c p,
@@ -408,12 +416,12 @@ margin-bottom: -20px;
     z-index: 0;
   }
  .third-c {
-  margin-left: 20px; 
+  margin-left: -70px; 
 }
 
 .third-c p, .third-c h3 {
   width: auto;
-  margin-left: 15px;
+  margin-left:-65px;
 }
 .first-data, .second-data, .third-data{
   display: grid;
