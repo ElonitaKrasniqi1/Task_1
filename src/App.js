@@ -12,6 +12,7 @@ import text from "./assets/text.jpeg";
 import language from "./assets/language.png";
 import adverstisement from "./assets/adverstisement.png";
 import opportunity from "./assets/opportunity.png";
+import kevinJoe from process.env.PUBLIC_URL + '/kevinJoe.png';
 
 const kevinJoe = require("./assets/kevinJoe.png");  
 
