@@ -154,6 +154,7 @@ const thirdcolumn = [
 export default function App() {
   return (
     <>
+    <div className="App">
       <div className="container">
           {firstcolumn.map((item, index) => (
             <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
@@ -165,8 +166,9 @@ export default function App() {
           {thirdcolumn.map((item, index) => (
             <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
           ))}
-        </div>
+                </div>
       <Profile />
+      </div>
       </>
   );
 }
