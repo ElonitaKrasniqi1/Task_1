@@ -149,6 +149,10 @@ bottom: 45px;
 }
 
 @media screen and (max-width: 399px) {
+  .App{
+    width: 100%;
+    overflow-x: hidden;
+  }
   .container,
   .image-container,
   .data {
@@ -164,6 +168,8 @@ bottom: 45px;
 
   .image-section {
     margin-left: 25px;
+    width: 70px;
+    height: 70px;
   }
 
   .card-body {
@@ -207,6 +213,10 @@ bottom: 45px;
 }
 
 @media screen and (min-width: 400px) and (max-width: 714px) {
+  .App{
+    width: 100%;
+    overflow-x: hidden;
+  }
   .container,
   .image-container,
   .data {
@@ -260,6 +270,10 @@ bottom: 45px;
 }
 
 @media screen and (min-width: 714px) and (max-width: 1024px) {
+  .App{
+    width: 100%;
+    overflow-x: hidden;
+  }
   .container,
   .image-container,
   .data {
@@ -318,6 +332,10 @@ bottom: 45px;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px){
+  .App{
+    width: 100%;
+    overflow-x: hidden;
+  }
   .container,
   .image-container,
   .data {
@@ -372,11 +390,15 @@ bottom: 45px;
 }
 
 @media screen and (min-width: 1201px) {
+  .App{
+    width: 100%;
+    overflow-x: hidden;
+  }
 .text{
   width: 50%;
 }
 .card{
-  margin-right: 5%;
+  margin-right: 15%;
   width: 75%;
   height: 400px;
 }
