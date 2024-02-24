@@ -1,6 +1,8 @@
+
 .image-container {
-  display: flex;
-  margin-top: 50px; 
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 0.4fr); 
 }
 
 .image-section {
@@ -11,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 10px;
-  margin-left: 160px;
+  margin-left: 60px;
   margin-top: 70px;
   overflow: hidden;
   border: 3px solid lightblue;
@@ -23,63 +25,30 @@
 
 .text {
   position: absolute;
-  margin-left: 280px; 
-  left: 0;
-  margin-top: -25px;
-}
-
-.text p {
-  width: 280px;
+  margin-left: 110px; 
+  width: 250px;
 }
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 0.4fr);
+
 }
-.second-c{
-  margin-left: 200px;
-}
-.first-c, .second-c, .third-c {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.second-c p {
-  width: 280px;
-  margin-left: 475px;
-}
-.second-c h3 {
-  margin-left: 475px;
-}
-.third-c{
-  margin-left: 175px;
-}
-.third-c p{
-  width: 280px;
-  margin-left: 925px;
-}
-.third-c h3{
-  margin-left: 925px;
-}
-.first-data,
-.second-data,
-.third-data {
+
+.data {
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 0.4fr);
 }
-
-.first-data .card,
-.second-data .card,
-.third-data .card {
+.data .card {
   margin-bottom: 10px; 
 }
-.round-image {
+.data .round-image {
   width: 40px; 
   height: 40px; 
   border-radius: 50%;
   object-fit: cover;
-  margin-left: 50px;
 }
 .card {
   border: 1px solid #ccc;
@@ -100,13 +69,15 @@
 }
 
 .card-body {
+  position: relative;
   display: flex;
   align-items: center;
-  margin-top: 40px;
-  padding-left: 20px;
+  margin-top: 20px;
+  left: 20px;
+  width: 300px;
 }
 
-.first-data .new-button {
+.data .new-button {
   color: #fff;  
   border-radius: 5px; 
   cursor: pointer;
@@ -124,26 +95,23 @@
 .prf-cont {
   display: flex;
   flex-direction: column;
-  padding-bottom: 10px;
 }
 
-.text-container p {
-  order: 3;
-}
 .KevinJoe{
-  position: absolute;
+  position: relative;
   margin-left: 200px;
-  margin-top: -25px;
+bottom: 45px;
 }
 
-.text-c{
-  padding-top: 40px;
+.data .text-c{
+  margin-top: -20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: 	#C0C0C0;
   font-weight: 600;
 }
 
-.download-button{
+ .download-button{
+  position: relative;
   border: 1px solid blue;
   border-radius: 45px;
   font-family: sans-serif;
@@ -151,9 +119,13 @@
   cursor: pointer;
   height: 40px;
   width: 200px;
-  margin-top: 40px;
   background: none;
   color: blue;
+}
+.data .download-button{
+  position: absolute;
+  left: 25px;
+  top: 235px;
 }
 
 .download-button:hover {
@@ -163,275 +135,12 @@
   transition: transform 0.5s;   
 }
 
-
-.second-data .text-c{
-padding-top: 35px;
-margin-bottom: -20px;
-}
-
-
-.third-data .new-button{
-  color: #fff;  
-  border-radius: 5px; 
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; 
-  height: 40px;
-  width: 110px;
-  font-family: sans-serif;
-  font-size: medium;
-}
-.third-data .new-button:hover {
-  color: #000;
-}
-
-.second-data .new-button {
-  color: #fff;  
-  border-radius: 5px; 
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; 
-  height: 40px;
-  width: 110px;
-  font-family: sans-serif;
-  font-size: medium;
-}
-.second-data .new-button:hover {
-  color: #000; 
-}
-
-
-.first-data .card {
-  position: relative;
-}
-
-.first-data .img-container {
-  position: absolute;
-  left: 115px;
-  top: 90px;
-}
-
-
-.second-data .img-container {
-  position: absolute;
-  left: 115px;
-  top: 90px;
-}
-
-.third-data .card {
-  position: relative;
-}
-
-.third-data .img-container {
-  position: absolute;
-  left: 115px;
-  top: 90px;
-}
-
-.first-data, .second-data, .third-data {
+.data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
-.first-data .card {
-  position: relative;
-}
-
-.first-data .download-button{
+.data .img-container{
   position: absolute;
-  left: 25px;
-  top: 300px;
-}
-
-
-.second-data .card {
-  position: relative;
-}
-
-.second-data .download-button{
-  position: absolute;
-  left: 25px;
-  top: 300px;
-}
-
-
-.third-data .download-button{
-  position: absolute;
-  left: 25px;
-  top: 300px;
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
- .third-c p {
-    width: 100%;
-  }
-  .second-c {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin: 0 20px;
-    position: relative;
-    width: calc(50% - 40px); 
-  }
-
-  .second-c p,
-  .second-c h3 {
-    width: 100%; 
-    margin-left: 0; 
-    position: relative; 
-    z-index: 1; 
-    width: 230px;
-  }
-
-  .second-c .img-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-  }
- .third-c {
-  margin-left: -5px; 
-}
-
-.third-c p, .third-c h3 {
-  width: auto;
-  margin-left: -5px;
-}
-.first-data, .second-data, .third-data{
-  display: grid;
-  grid-template-columns: repeat(3,375px);
-  justify-content: center;
-  align-items: center;
-  margin-left: -30px;
-  margin-right: 80px;  
-}
-}
-@media screen and (min-width: 700px) and (max-width: 1024px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
- .third-c p {
-    width: 100%;
-  }
-  .first-c p{
-    width: 230px;
-  }
-  .second-c {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin: 0 20px;
-    position: relative;
-    width: calc(50% - 40px); 
-  }
-
-  .second-c p,
-  .second-c h3 {
-    width: 100%; 
-    margin-left: 0; 
-    position: relative; 
-    z-index: 1; 
-    width: 230px;
-  }
-
-  .second-c .img-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-  }
- .third-c {
-  margin-left: -5px; 
-}
-
-.third-c p, .third-c h3 {
-  width: auto;
-  margin-left: -5px;
-}
-.first-data, .second-data, .third-data{
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: repeat(2, 1fr); 
-  grid-gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 80%; 
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-}
-@media screen and (min-width: 250px) and (max-width: 700px){
-  .container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
- .third-c p {
-    width: 100%;
-  }
-  .first-c{
-    margin-left: -70px;
-  }
-  .first-c p, .first-c h3{
-    width: auto;
-    margin-left:-65px;
-  }
-  .second-c {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin: 0 20px;
-    position: relative;
-    width: calc(50% - 40px); 
-    margin-left: -70px;
-  }
-
-  .second-c p,
-  .second-c h3 {
-    width: 100%; 
-    margin-left: 0; 
-    position: relative; 
-    z-index: 1; 
-    width: 230px;
-  }
-
-  .second-c .img-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-  }
- .third-c {
-  margin-left: -70px; 
-}
-
-.third-c p, .third-c h3 {
-  width: auto;
-  margin-left:-65px;
-}
-.first-data, .second-data, .third-data{
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: repeat(2, 1fr); 
-  grid-gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 80%; 
-  margin: 0 auto;
-  box-sizing: border-box;
-}
+  top: 0;
+  left: 135px;
 }

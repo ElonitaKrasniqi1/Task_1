@@ -22,7 +22,7 @@ export default function Card({ version, buttonText, author, image, downloadBtn, 
           <button className="download-button">
             {downloadBtn}
           </button>
-        </div>
+          </div>
       </div>
     </div>
   );

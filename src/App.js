@@ -3,6 +3,7 @@ import "./App.css";
 import ImageSection from "./ImageSection";
 import Card from "./Card";
 
+
 import com from "./assets/com.png";
 import award from "./assets/award.png";
 import sales from "./assets/sales.png";
@@ -12,10 +13,7 @@ import text from "./assets/text.jpeg";
 import language from "./assets/language.png";
 import adverstisement from "./assets/adverstisement.png";
 import opportunity from "./assets/opportunity.png";
-import kevinJoe from process.env.PUBLIC_URL + '/kevinJoe.png';
-
-const kevinJoe = require("./assets/kevinJoe.png");  
-
+import kevinJoe from './assets/kevinJoe.png';
 
 
 const cardData = {
@@ -157,24 +155,19 @@ export default function App() {
   return (
     <>
       <div className="container">
-        <div className="first-c">
           {firstcolumn.map((item, index) => (
             <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
           ))}
-        </div>
-        <div className="second-c">
           {secondcolumn.map((item, index) => (
             <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
           ))}
-        </div>
-        <div className="third-c">
+
           {thirdcolumn.map((item, index) => (
             <ImageSection key={index} image={item.image} title={item.title} text={item.text} />
           ))}
         </div>
-      </div>
       <Profile />
-    </>
+      </>
   );
 }
 
@@ -182,15 +175,13 @@ export function Profile() {
   return (
     <><div className="prf-cont">
       <div className="wrapper">
-    <div className="first-data">
+    <div className="data">
     {cardData.cards.map((card, index) => (
             <><Card key={index} {...cardData} {...card} /></>
           ))}
-    </div><div className="second-data">
     {newCardData.cards.map((card, index) => (
                        <><Card key={index} {...newCardData} {...card} /></>
           ))}
-        </div><div className="third-data">
   {newnCardData.cards.map((card, index) => (
                <><Card key={index} {...newnCardData} {...card} /></>
   ))}
