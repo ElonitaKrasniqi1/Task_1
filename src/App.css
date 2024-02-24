@@ -144,3 +144,169 @@ bottom: 45px;
   top: 0;
   left: 135px;
 }
+
+
+@media screen and (max-width: 714px) {
+  .container,
+  .image-container,
+  .data {
+    grid-template-columns: 1fr;
+  }
+
+  .data .card {
+    margin-left: 25px;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-section {
+    margin-left: 25px;
+  }
+
+  .card-body {
+    margin-left: -45px;
+    width: 95%;
+  }
+
+  .data .new-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-button {
+    position: relative;
+    left: 30px;
+    top: 0;
+    margin-top: 10px; 
+  }
+
+  .data .img-container {
+    position: absolute;
+    margin-left: 30px;
+  }
+
+  .KevinJoe {
+    position: relative;
+    margin-left: 200px;
+   bottom: 45px;
+  }
+  .text-container{
+    margin-left: 40px;
+  }
+  .text{
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 714px) and (max-width: 1024px) {
+  .container,
+  .image-container,
+  .data {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .data .card {
+    margin-left: 25px;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-section {
+    margin-left: 25px;
+  }
+
+  .card-body {
+    margin-left: -45px;
+    width: 95%;
+  }
+
+  .data .new-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-button {
+    position: relative;
+    left: 30px;
+    top: 0;
+    margin-top: 10px; 
+  }
+
+  .data .img-container {
+    position: absolute;
+    margin-left: 30px;
+  }
+
+  .KevinJoe {
+    position: relative;
+    margin-left: 200px;
+   bottom: 45px;
+  }
+  .text-container{
+    margin-left: 40px;
+  }
+  .text{
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+  .container,
+  .image-container,
+  .data {
+    grid-template-columns: repeat(3,0.5fr);
+  }
+  .data .card {
+    margin-left: 25px;
+
+  }
+
+  .image-section {
+    margin-left: 25px;
+  }
+
+  .card-body {
+    margin-left: -45px;
+    width: 95%;
+  }
+
+  .data .new-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-button {
+    position: relative;
+    left: 40px;
+    margin-top: 50px; 
+  }
+
+  .data .img-container {
+    position: absolute;
+    margin-left: 30px;
+  }
+
+  .KevinJoe {
+    position: relative;
+    margin-left: 200px;
+   bottom: 45px;
+  }
+  .text-container{
+    margin-left: 40px;
+  }
+  .text{
+    width: 50%;
+  }
+  .card{
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+.text{
+  width: 50%;
+}
+}
